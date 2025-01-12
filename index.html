@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestão de Licenças</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Gestão de Licenças</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Licenças Emitidas</h2>
+            <input type="text" id="search" placeholder="Buscar por nome..." oninput="filterLicenses()">
+            <select id="filter" onchange="filterLicenses()">
+                <option value="all">Todos</option>
+                <option value="ready">Pronta para levantamento</option>
+                <option value="pending">Pendente</option>
+            </select>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>Status</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody id="license-table">
+                    <!-- As licenças serão listadas aqui -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <script src="app.js"></script>
+</body>
+</html>
